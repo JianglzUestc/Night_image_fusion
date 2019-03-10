@@ -1,0 +1,13 @@
+function [yaf,uaf,vaf,yff,uff,vff,ya,ua,va,yf,uf,vf] = yuvFilter(imgIn1_yuv,imgIn2_yuv)
+ya = imgIn1_yuv(:,:,1);
+yaf = wlsFilter(ya);
+ua = imgIn1_yuv(:,:,2);
+uaf = wlsFilter(ua);
+va = imgIn1_yuv(:,:,3);
+vaf = wlsFilter(va);
+yf = imgIn2_yuv(:,:,1);
+yff = wlsFilter(yf);
+uf = imgIn2_yuv(:,:,2);
+uff = wlsFilter(uf);
+vf = imgIn2_yuv(:,:,3);
+vff = wlsFilter(vf);
